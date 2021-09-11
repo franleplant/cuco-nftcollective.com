@@ -24,7 +24,7 @@ export default function handler(
     description: "CuCo description",
     external_url: req.url,
     image:
-      "https://storage.googleapis.com/opensea-prod.appspot.com/puffs/3.png",
+      "https://cucollectors.com/dog.jpg",
     name: "CuCo test",
     attributes: [
       {
