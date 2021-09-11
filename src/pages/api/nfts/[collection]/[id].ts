@@ -23,8 +23,7 @@ export default function handler(
   res.status(200).json({
     description: "CuCo description",
     external_url: req.url,
-    image:
-      "https://cucollectors.com/dog.jpg",
+    image: "https://www.cucollectors.com/dog.jpg",
     name: "CuCo test",
     attributes: [
       {
