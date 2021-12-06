@@ -7,18 +7,39 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"src/**/*.{ts,tsx}\""
+    "typecheck": "tsc --noEmit",
+    "prettier": "prettier \"./{src,pages}/**/*.{js,jsx,ts,tsx,css,md}\"",
+    "format": "yarn prettier --write",
+    "format-check": "yarn prettier --check",
+    "ci": "yarn lint && yarn format-check && yarn typecheck",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "next": "11.1.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "autoprefixer": "^10.4.0",
+    "next": "12.0.1",
+    "postcss": "^8.4.4",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "tailwindcss": "^2.2.19"
   },
   "devDependencies": {
     "@types/react": "17.0.20",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
-    "prettier": "^2.4.0",
-    "typescript": "4.4.3"
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "^2.4.1",
+    "typescript": "4.4.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
   }
 }
