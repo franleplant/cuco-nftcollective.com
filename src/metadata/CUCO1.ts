@@ -1,4 +1,4 @@
-import {ERC721Metadata} from './types'
+import { ERC721Metadata } from "./types";
 
 export const data: Array<ERC721Metadata> = [
   {
