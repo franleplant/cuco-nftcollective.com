@@ -1,6 +1,7 @@
-import { ERC721Metadata } from "metadata/types";
 import type { NextApiRequest, NextApiResponse } from "next";
 import invariant from "ts-invariant";
+
+import { ERC721Metadata } from "metadata/types";
 
 export default async function handler(
   req: NextApiRequest,
