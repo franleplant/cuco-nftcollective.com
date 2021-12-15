@@ -1,14 +1,10 @@
-import { ERC721Metadata } from "metadata/CUCO1";
+import { ERC721Metadata } from "metadata/types";
 import type { NextApiRequest, NextApiResponse } from "next";
 import invariant from "ts-invariant";
 
-type Data = {
-  name: string;
-};
-
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<ERC721Metadata>
 ) {
   const { collection, tokenId } = req.query;
   invariant(typeof collection === "string", "bad collection")
