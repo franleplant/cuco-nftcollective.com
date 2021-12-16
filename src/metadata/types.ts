@@ -24,3 +24,14 @@ export interface ERC721Metadata {
   image: string;
   attributes?: Array<ERC721Attr>;
 }
+
+export interface OSCollectionMetadata {
+  name: string;
+  description: string;
+  image: string;
+  external_link: string;
+  /** Indicates a 1% seller fee. */
+  seller_fee_basis_points: number;
+  /** Where seller fees will be paid to. Address */
+  fee_recipient: string;
+}
