@@ -4,6 +4,8 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Logo from "assets/logo.jpg";
+import Header from "components/Header";
+import Layout from "components/Layout";
 
 const Home: NextPage = () => {
   return (
@@ -19,35 +21,38 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="min-h-full mx-auto py-10">
-        <div className="space-y-4 text-center">
-          <Image
-            src={Logo}
-            width="250"
-            height="250"
-            alt="Cuco: our pet ghost logo"
-          />
-          <h1>Cuco</h1>
-          <h3>NFT Collective</h3>
-          <div className="space-x-4 py-10">
-            <a
-              href="https://twitter.com/CuCo_NFTs"
-              target="__blank"
-              className="text-2xl"
-            >
-              <FontAwesomeIcon icon={["fab", "twitter"]} color="#FFFFFF" />
-            </a>
+      <Layout>
+        <Header />
+        <main className="min-h-full py-10 mx-auto">
+          <div className="text-center space-y-4">
+            <Image
+              src={Logo}
+              width="250"
+              height="250"
+              alt="Cuco: our pet ghost logo"
+            />
+            <h1>Cuco</h1>
+            <h3>NFT Collective</h3>
+            <div className="py-10 space-x-4">
+              <a
+                href="https://twitter.com/CuCo_NFTs"
+                target="__blank"
+                className="text-2xl"
+              >
+                <FontAwesomeIcon icon={["fab", "twitter"]} color="#FFFFFF" />
+              </a>
 
-            <a
-              href="https://www.instagram.com/cuco_nftcollective"
-              target="__blank"
-              className="text-2xl"
-            >
-              <FontAwesomeIcon icon={["fab", "instagram"]} color="#FFFFFF" />
-            </a>
+              <a
+                href="https://www.instagram.com/cuco_nftcollective"
+                target="__blank"
+                className="text-2xl"
+              >
+                <FontAwesomeIcon icon={["fab", "instagram"]} color="#FFFFFF" />
+              </a>
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </Layout>
     </>
   );
 };
