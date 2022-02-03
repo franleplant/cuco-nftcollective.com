@@ -8,6 +8,9 @@ import Header from "components/Header";
 import Layout from "components/Layout";
 import HorsemenHero from "components/HorsemenHero";
 import AboutUs from "components/AboutUs";
+import RoadMap from "components/RoadMap";
+import Artists from "components/Artists";
+import Footer from "components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -23,38 +26,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout>
-        <Header />
-        <main className="min-h-full py-10 mx-auto">
+      <Layout
+        header={() => <Header />}
+        footer={({ className }) => <Footer className={className} />}
+      >
+        <main className="flex flex-col min-h-full py-10 mx-auto gap-40">
           <HorsemenHero />
           <AboutUs />
-          <div className="text-center space-y-4">
-            <Image
-              src={Logo}
-              width="250"
-              height="250"
-              alt="Cuco: our pet ghost logo"
-            />
-            <h1>Cuco</h1>
-            <h3>NFT Collective</h3>
-            <div className="py-10 space-x-4">
-              <a
-                href="https://twitter.com/CuCo_NFTs"
-                target="__blank"
-                className="text-2xl"
-              >
-                <FontAwesomeIcon icon={["fab", "twitter"]} color="#FFFFFF" />
-              </a>
-
-              <a
-                href="https://www.instagram.com/cuco_nftcollective"
-                target="__blank"
-                className="text-2xl"
-              >
-                <FontAwesomeIcon icon={["fab", "instagram"]} color="#FFFFFF" />
-              </a>
-            </div>
-          </div>
+          <RoadMap />
+          <Artists />
         </main>
       </Layout>
     </>
@@ -62,3 +42,30 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+//<div className="text-center space-y-4">
+//<Image
+//src={Logo}
+//width="250"
+//height="250"
+//alt="Cuco: our pet ghost logo"
+///>
+//<h1>Cuco</h1>
+//<h3>NFT Collective</h3>
+//<div className="py-10 space-x-4">
+//<a
+//href="https://twitter.com/CuCo_NFTs"
+//target="__blank"
+//className="text-2xl"
+//>
+//<FontAwesomeIcon icon={["fab", "twitter"]} color="#FFFFFF" />
+//</a>
+
+//<a
+//href="https://www.instagram.com/cuco_nftcollective"
+//target="__blank"
+//className="text-2xl"
+//>
+//<FontAwesomeIcon icon={["fab", "instagram"]} color="#FFFFFF" />
+//</a>
+//</div>
+//</div>

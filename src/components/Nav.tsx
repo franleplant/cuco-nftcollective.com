@@ -7,7 +7,7 @@ const MOBILE_BREAKPOINT = "640px";
 
 export interface IProps {}
 
-const LINKS = [
+export const LINKS = [
   { label: "about", href: "#about" },
   { label: "road map", href: "#road-map" },
   { label: "artist", href: "#artist" },

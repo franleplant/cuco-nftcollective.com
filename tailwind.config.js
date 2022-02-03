@@ -7,7 +7,10 @@ module.exports = {
     extend: {
       colors: {
         cuco: {
-          blue: "#08152d"
+          blue: {
+            500: "#1c3252",
+            700: "#08152d",
+          }
         }
       }
     },

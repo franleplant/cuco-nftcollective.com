@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply bg-cuco-blue;
+    @apply bg-cuco-blue-700;
   }
 
   h1 {
