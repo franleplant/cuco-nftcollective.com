@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "assets/logo.jpg";
 import Header from "components/Header";
 import Layout from "components/Layout";
+import HorsemenHero from "components/HorsemenHero";
+import AboutUs from "components/AboutUs";
 
 const Home: NextPage = () => {
   return (
@@ -24,6 +26,8 @@ const Home: NextPage = () => {
       <Layout>
         <Header />
         <main className="min-h-full py-10 mx-auto">
+          <HorsemenHero />
+          <AboutUs />
           <div className="text-center space-y-4">
             <Image
               src={Logo}

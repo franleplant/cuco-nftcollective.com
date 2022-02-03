@@ -54,7 +54,8 @@ export function MobileNav() {
         <Menu.Button
           className={`
         inline-flex justify-center w-full px-4 py-2 text-sm font-medium
-        text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30
+        text-white bg-black bg-opacity-0 hover:bg-opacity-30
+        rounded-md
         focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75
         `}
         >
@@ -73,8 +74,9 @@ export function MobileNav() {
         <Menu.Items
           as="nav"
           className={`
+        bg-blue-800 hover:bg-opacity-30
         absolute right-0 z-10 w-56 mt-2
-        bg-blue-800 shadow-lg origin-top-right
+        shadow-lg origin-top-right
         divide-y divide-gray-100 rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none
         text-white
         `}
